@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+.container{
+    background-color: hsl(185, 41%, 84%);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.heading{
+    text-align: center;
+    
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    margin-top: 100px;
+    font-size: 26px;
+    letter-spacing: 6px;
+}
+
+.row{
+    margin-top: 60px;
+    height: 500px;
+    width: 1000px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.col1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 0px;
+    width: 40%;
+    }  
+    
+
+label{
+     color: hsl(186, 14%, 43%);
+     font-weight: 700;
+}
+
+input{
+    background-color: hsl(189, 41%, 97%);
+    font-size: 1.5rem;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    border-radius: 4px;
+    width: 385px;
+    height: 40px;
+    
+    border: 2px solid transparent;
+}
+
+.currency input{
+    margin-top: 6px;
+    border: 0;
+    padding-left: 18px;
+}
+
+input[type="number"]::placeholder{
+ color: hsl(184, 14%, 56%);
+ opacity: 1;
+ text-align: right;
+ margin-left: 10px;
+ 
+ 
+}
+
+input:focus,textarea:focus{
+    outline: none;
+     border: 2px solid #70B7AF;
+ }
+ 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.currency {
+    position: relative;
+    font-size: 1.2rem;
+    color: hsl(184, 14%, 56%);
+    font-weight: 400;
+    
+  
+}
+
+.currency:before{
+    position: absolute;
+    top: 0;
+    content: '$';
+    left: 5px;
+}
+
+
+.tip-heading{
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    margin-top: 50px;
+    
+}
+
+.btn{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border: 3px solid transparent;
+    background-color: hsl(183, 100%, 15%);
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-top: 18px;
+    text-align: center;
+    
+}
+
+.btn:hover{
+    background-color: #9FE8DF;
+    
+    color: hsl(183, 100%, 15%);
+   
+}
+
+.active{
+    background-color: #26C2AD;
+    color: hsl(183, 100%, 15%);
+}
+
+
+#custom-input{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    margin-top: 18px;
+    border-radius: 4px;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    vertical-align: bottom;
+    border: 1px solid transparent;
+   
+}
+
+#custom-input:focus{
+    border: 2px solid #70B7AF;
+}
+
+
+.icon{
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 12px;
+    width: 13px;
+    height: 17px;
+    z-index: 10;
+}
+
+#people-para{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+}
+
+.col2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.container2{
+    border-radius: 25px;
+    width: 85%;
+    height: 85%;
+    background-color:hsl(183, 100%, 15%) ;
+}
+
+.container2-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+    padding-bottom: 4px;
+}
+
+
+.tip-amount{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.per-person{
+    color: #568286;
+    font-weight: 700;
+}
+
+.tip-amount-number{
+    color: #31C0AF;
+    font-size: 45px;
+}
+
+.lastrow{
+    margin-top: 2px;
+}
+
+.btn-reset{
+    background-color: #26C2AD;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    color: hsl(183, 100%, 15%);
+}
+
+.grey{
+    background-color: #0D686D;
+}
+
+.reset-button{
+    text-align: center;
+    margin-top: 112px;
+    
+}
+
+@media (max-width: 1015px){
+    .heading{
+        margin-top: 30px;
+        letter-spacing: 6px;
+    }
+    
+    .container{
+        
+        width: 100vw;
+        height: 1030px;
+    }
+
+    .row{
+        margin-top: 32px;
+        width: 100vw;
+        height:1000px;
+        flex-flow: column;
+        margin-left: auto;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0 ;
+    }
+
+    .col1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2px;
+    }
+
+   .col2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 500px;
+   }
+
+    .bill-input{
+        width: 80vw;
+    }
+
+    .tip-heading{
+        margin-top: 30px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-wrap: wrap;
+        
+        gap: 1.1rem;
+        
+    }
+
+    .btn{
+        width: 130px;
+    }
+
+   #custom-input{
+    width: 130px;
+   }
+
+   #people-no{
+    margin-top: 30px;
+    
+   }
+
+   #people{
+    width: 80vw;
+   }
+
+   .container2-row{
+    display: flex;
+    justify-content: space-between;
+   }
+
+   .container2{
+    height: 300px;
+    margin-top: 0;
+
+   }
+
+   .tip-amount{
+    font-size: 16px;
+   }
+
+   .per-person{
+    font-size: 14px;
+   }
+
+   .tip-amount-number{
+    font-size: 35px;
+   }
+
+   .reset-button{
+    margin-top: 25px;
+   }
+
+   .btn-reset{
+    width: 280px;
+    text-align: center;
+   }
+
+}
