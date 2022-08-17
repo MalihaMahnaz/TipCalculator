@@ -84,20 +84,12 @@ document.querySelector('#total-amount-number').innerHTML=`\$${total.toFixed(2)}`
     document.querySelector('#total-amount-number').innerHTML=`\$${total.toFixed(2)}`;
 
 }else if(peopleval==0){
-   console.log('fill');
-    peopleNo.style.borderColor='#BD715C';
+   peopleNo.style.borderColor='#BD715C';
      paraDiv=document.createElement('p');
      paraDiv.id='mydiv';
     paraDiv.innerText=`Can't be zero`;
     paraDiv.style.color='#BD715C';
-    
-    document.querySelector('#people-para').style.display='flex';
-    document.querySelector('#people-para').style.justifyContent='space-between';
     document.querySelector('#people-para').appendChild(paraDiv);
-
-  
-
-   
 }
 }
 
