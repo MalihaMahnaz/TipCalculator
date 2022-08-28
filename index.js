@@ -47,7 +47,7 @@ const getbillInput=()=>{
 
 const getpeopleInput=()=>{
 btnReset.classList.remove('grey');
-paraDiv.remove();
+
 peopleNo.style.border='2px solid transparent';
 
  peopleval=document.querySelector('#people').value;
