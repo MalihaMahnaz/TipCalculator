@@ -240,10 +240,18 @@ input[type=number]::-webkit-outer-spin-button {
     
 }
 
+.mydiv{
+    display: none;
+}
 
+.mydiv.active{
+    display: block;
+    color: #BD715C;
+    background: none;
+}
     
 
-@media (max-width: 1015px){
+@media (max-width: 1025px){
     .heading{
         margin-top: 30px;
         letter-spacing: 6px;
