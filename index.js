@@ -8,14 +8,15 @@ const twentyfiveBtn=document.querySelector('#twentyfive');
 const fiftyBtn=document.querySelector('#fifty');
 const btnReset=document.querySelector('.btn-reset');
 const percentButtons=document.querySelectorAll('.btn');
+const errorPara=document.querySelector('.mydiv');
 
 let billval=0;
 let peopleval=0;
 let customval=0;
 let tipval=0;
 let total=0;
-let paraDiv;
-let paraId;
+
+
 
 const getcustomInput=()=>{
     btnReset.classList.remove('grey');
@@ -42,24 +43,7 @@ const getbillInput=()=>{
         handlefunc();
      }
     return parseFloat(billval);
-}
-
-
-const getpeopleInput=()=>{
-btnReset.classList.remove('grey');
-
-peopleNo.style.border='2px solid transparent';
-
- peopleval=document.querySelector('#people').value;
- if(billval>0 && customval>0){
-    handlefunc();
- }else if(billval>0 && tipval>0){
-    handlefunc();
- }
-
- return parseInt(peopleval);
 };
-
 
 
 const handlefunc=(tipResult)=>{
@@ -83,16 +67,27 @@ document.querySelector('#total-amount-number').innerHTML=`\$${total.toFixed(2)}`
     document.querySelector('#tip-amount-number').innerHTML=`\$${result.toFixed(2)}`;
     document.querySelector('#total-amount-number').innerHTML=`\$${total.toFixed(2)}`;
 
-}else if(peopleval==0){
-   peopleNo.style.borderColor='#BD715C';
-     paraDiv=document.createElement('p');
-     paraDiv.id='mydiv';
-    paraDiv.innerText=`Can't be zero`;
-    paraDiv.style.color='#BD715C';
-    document.querySelector('#people-para').appendChild(paraDiv);
-}
-}
+}else if(peopleval==0 && billval>0 || peopleval==0 && customval>0){
+   console.log('fill');
+    peopleNo.style.borderColor='#BD715C';
+    errorPara.classList.add('active');
 
+}
+};
+const getpeopleInput=()=>{
+    btnReset.classList.remove('grey');
+    errorPara.classList.remove('active');
+    peopleNo.style.border='2px solid transparent';
+    
+     peopleval=document.querySelector('#people').value;
+     if(billval>0 && customval>0){
+        handlefunc();
+     }else if(billval>0 && tipval>0){
+        handlefunc();
+     }
+    
+     return parseInt(peopleval);
+    };
    
 const fiveBtnClick=fiveBtn.addEventListener('click',function(){
     btnReset.classList.remove('grey');
